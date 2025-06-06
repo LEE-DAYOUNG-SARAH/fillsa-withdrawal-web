@@ -22,6 +22,13 @@ export function useSocialLogin() {
           if (!window.Kakao || !window.Kakao.Auth) {
             throw new Error("Kakao SDK is not properly loaded");
           }
+
+          if (window.Kakao.Auth.getAccessToken()) {
+            await new Promise((resolve) => {
+              window.Kakao.Auth.logout(() => resolve(null));
+            });
+          }
+
           window.Kakao.Auth.authorize({
             redirectUri: `${import.meta.env.VITE_API_BASE_URL}/api/v1/oauth/${SOCIAL_PROVIDERS.KAKAO}/callback`,
             scope: "profile_nickname,profile_image",
@@ -42,7 +49,8 @@ export function useSocialLogin() {
             `?client_id=${clientId}` +
             `&redirect_uri=${redirectUri}` +
             `&response_type=code` +
-            `&scope=email profile`;
+            `&scope=email profile` +
+            `&prompt=select_account`;
           break;
         }
 
