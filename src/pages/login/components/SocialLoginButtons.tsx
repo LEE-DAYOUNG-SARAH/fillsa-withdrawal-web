@@ -10,7 +10,7 @@ const SocialLoginButtons = ({onLogin}: SocialLoginButtonsProps) => (
       onClick={() => onLogin(SOCIAL_PROVIDERS.KAKAO)}
       className="bg-[#FFE600] text-[#371D1E] text-[14px] font-bold leading-[21px] h-[50px] w-[320px] rounded-[8px] flex items-center justify-center gap-2 align-middle"
     >
-      <img src="/kakao.png" alt="Kakao Logo" className="w-[18px] h-[17px]"/>
+      <img src="/kakao.svg" alt="Kakao Logo" className="w-[18px] h-[17px]"/>
       카카오 계정으로 시작하기
     </button>
     <button
