@@ -13,7 +13,7 @@ function FailPage() {
   useClearClientCache("/fail");
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full px-4">
       <FailMessage message={errorMessage} />
       <Divider />
       <SupportContact email={import.meta.env.VITE_SUPPORT_EMAIL} />

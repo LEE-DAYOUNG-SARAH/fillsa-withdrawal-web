@@ -7,7 +7,7 @@ function SuccessPage() {
   useClearClientCache("/success");
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full px-4">
       <SuccessMessage />
       <Divider />
       <HomeButton />

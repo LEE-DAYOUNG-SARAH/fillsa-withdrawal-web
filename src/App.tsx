@@ -26,11 +26,10 @@ export default function App() {
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div
-              className="w-[500px] h-[450px] rounded-xl mx-auto absolute left-1/2 transform -translate-x-1/2"
-              style={{
-                top: '170px',
-                boxShadow: '0px 0px 16px -3px #CBC0A8B2',
-              }}
+            className="relative w-full max-w-[500px] min-h-[450px] rounded-xl mx-auto p-4 sm:mt-[170px] mt-4"
+            style={{
+              boxShadow: '0px 0px 16px -3px #CBC0A8B2',
+            }}
           >
           <Routes>
               <Route path="/" element={<LoginPage />} />
